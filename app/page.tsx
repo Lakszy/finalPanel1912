@@ -5,15 +5,24 @@ import { CardDemo } from "@/components/cards";
 import NavBar from "@/components/navbar";
 import { CenterBar } from "@/components/centerBar";
 import { TableDemo } from "@/components/TableDemo";
-import { PATIENTS, PATIENTS_HEADER } from "../components/data"
-import { BottomBar } from '@/components/BottomBar';
+import { PATIENTS, PATIENTS_HEADER } from "../components/data";
+import { BottomBar } from "@/components/BottomBar";
 import { CalendarDemo } from "@/components/appointmentPage";
+import SideBarV1 from "@/components/SideBarV1";
+import NavBarV1 from "@/components/NavBarV1";
+import StatsRow from "@/components/StatsRow";
 
 export default function Home() {
   return (
-    <div className="grid h-screen mainT w-full grid-cols-[max-content_1fr] overflow text-white">
-      <TabsDemo />
-      <div className="body text-black  overflow-y-scroll ">
+    <div className="grid h-screen w-full grid-cols-[max-content_1fr]">
+      {/* <TabsDemo /> */}
+      <SideBarV1 />
+      <div className="bg-[#f9f9f9] text-gray-500">
+        <NavBarV1 />
+        <StatsRow />
+      </div>
+
+      {/* <div className="body text-black  overflow-y-scroll ">
         <div className="sticky z-50 mainT top-0 bg-gray-800 overflow-auto">
           <NavBar />
         </div>
@@ -31,12 +40,12 @@ export default function Home() {
           <TableDemo data={PATIENTS} header={PATIENTS_HEADER} />
         </div>
         <div className="rounded-3xl p-3">
-          < BottomBar />
+          <BottomBar />
         </div>
         <div className="rounded-3xl p-3 ">
-        <CalendarDemo/>
+          <CalendarDemo />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
