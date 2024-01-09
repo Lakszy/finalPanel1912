@@ -14,15 +14,11 @@ function NavBar() {
   return (
     <div className="flex bg-stone-50 border border-black border-opacity-10 items-center justify-between gap-x-4 border-l px-4 py-4 z-50">
       <div className="flex items-center gap-x-4">
-        <div className="w-full min-w-[400px] rounded-xl">
-          <div className="relative">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 w-[100px] ">
-              <IoMdSearch size={26} />
-            </div>
-            <PrimaryInput placeholder="Search" />
-          </div>
-        </div>
-        <Link href="/appointment">
+        <PrimaryInput
+          LeftComp={<IoMdSearch size={26} />}
+          placeholder="Search with us" />
+       
+        {/* <Link href="/appointment">
           <button className="w-[216px] h-[66px] px-[60px] py-4 bg-[#0D1821] rounded-lg flex-col justify-center items-start inline-flex cursor-pointer">
             <div className="justify-center items-center inline-flex">
               <div className="flex text-white">
@@ -33,7 +29,7 @@ function NavBar() {
               </div>
             </div>
           </button>
-        </Link>
+        </Link> */}
       </div>
       <div className="flex items-center gap-x-4">
         <IconComponent icon={<IoSettingsOutline />} />

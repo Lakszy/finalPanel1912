@@ -13,12 +13,12 @@ const PrimaryInput = ({
     ...props
 }: IPrimaryInput ) => {
     return(
-        <div className="flex flex-col">
-            {!!label && <label className="text-sm text-gray-600">{label}</label>}
-            <div className="flex items-center border border-gray-300 rounded-lg py-2 bg-white ">
+        <div className="flex flex-col ">
+            {!!label && <label className="text-md text-gray-600">{label}</label>}
+            <div className="flex items-center border border-[#F0E4E4] rounded-3xl p-2 bg-white ">
                 {LeftComp && LeftComp}
                 <input
-                 className= "block bg-white p-2 border flex-1  "
+                    className= "block p-2  flex-1 border-none outline-none bg-transparent  "
                  {...props}  />
                 {RightComp && RightComp}
             </div>  
